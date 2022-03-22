@@ -7,7 +7,7 @@ using namespace std;
 
 // Helper function for solving 3 partition problem.
 // It returns 1 if there exist three subsets with a given sum.
-int subset_sum_recursive(vector<int> const &S, int n, int a, int b, int c) {
+int subset_sum_recur(vector<int> const &S, int n, int a, int b, int c) {
 
 	// Return true if the subset is found.
 	if (a == 0 && b == 0 & c == 0) {
@@ -22,26 +22,26 @@ int subset_sum_recursive(vector<int> const &S, int n, int a, int b, int c) {
 	// Case 1. The current item becomes part of the first subset.
 	bool A = false;
 	if (a - S[n] >= 0) {
-		A = subset_sum_recursive(S, n - 1, a - S[n], b, c);
+		A = subset_sum_recur(S, n - 1, a - S[n], b, c);
 	}
 
 	// Case 2. The current item becomes part of the second subset.
 	bool B = false;
 	if (!A && (b - S[n] >= 0)) {
-		B = subset_sum_recursive(S, n - 1, a, b - S[n], c);
+		B = subset_sum_recur(S, n - 1, a, b - S[n], c);
 	}
 
 	// Case 3. The current item becomes part of the third subset.
 	bool C = false;
 	if ((!A && !B) && (c - S[n] >= 0)) {
-		C = subset_sum_recursive(S, n - 1, a, b, c - S[n]);
+		C = subset_sum_recur(S, n - 1, a, b, c - S[n]);
 	}
 
 	return A || B || C;
 }
 
 // Recursivo.
-int partition3_recursive(vector<int> &A) {
+int partition3_recur(vector<int> &A) {
 
 	int n = A.size();
 
@@ -51,10 +51,11 @@ int partition3_recursive(vector<int> &A) {
 
 	int sum = accumulate(A.begin(), A.end(), 0);
 
-	return !(sum % 3) && subset_sum_recursive(A, n - 1, sum / 3, sum / 3, sum / 3);
+	return !(sum % 3) && subset_sum_recur(A, n - 1, sum / 3, sum / 3, sum / 3);
 }
 
-int subset_sum_dp(vector<int> const &S, int n, int a, int b, int c, unordered_map<string, bool> &lookup) {
+// Recursivo pero con "memoization".
+int subset_sum_dp_recur(vector<int> const &S, int n, int a, int b, int c, unordered_map<string, bool> &lookup) {
 	// https://www.techiedelight.com/3-partition-problem/
 
 	// A subset is found.
@@ -77,19 +78,19 @@ int subset_sum_dp(vector<int> const &S, int n, int a, int b, int c, unordered_ma
 		// Case 1.
 		bool A = false;
 		if (a - S[n] >= 0) {
-			A = subset_sum_dp(S, n - 1, a - S[n], b, c, lookup);
+			A = subset_sum_dp_recur(S, n - 1, a - S[n], b, c, lookup);
 		}
 
 		// Case 2.
 		bool B = false;
 		if (!A && (b - S[n] >= 0)) {
-			B = subset_sum_dp(S, n - 1, a, b - S[n], c, lookup);
+			B = subset_sum_dp_recur(S, n - 1, a, b - S[n], c, lookup);
 		}
 
 		// Case 3.
 		bool C = false;
 		if ((!A && !B) && (c - S[n] >= 0)) {
-			C = subset_sum_dp(S, n - 1, a, b, c - S[n], lookup);
+			C = subset_sum_dp_recur(S, n - 1, a, b, c - S[n], lookup);
 		}
 
 		// return true if we get a solution.
@@ -102,7 +103,7 @@ int subset_sum_dp(vector<int> const &S, int n, int a, int b, int c, unordered_ma
 
 // Function for solving the 3–partition problem. It returns true if the given
 // set `S[0…n-1]` can be divided into three subsets with an equal sum.
-int partition3_dp(vector<int> &S) {
+int partition3_dp_recur(vector<int> &S) {
 
 	int n = S.size();
 
@@ -116,7 +117,13 @@ int partition3_dp(vector<int> &S) {
 	// create a map to store solutions to a subproblem.
 	unordered_map<string, bool> lookup;
 
-	return !(sum % 3) && subset_sum_dp(S, n - 1, sum / 3, sum / 3, sum / 3, lookup);
+	return !(sum % 3) && subset_sum_dp_recur(S, n - 1, sum / 3, sum / 3, sum / 3, lookup);
+}
+
+int partition3_dp_iter() {
+	
+	
+	return 0;
 }
 
 int main() {
@@ -127,5 +134,5 @@ int main() {
 		std::cin >> A[i];
 	}
 	//std::cout << partition3_recursive(A) << '\n';
-	std::cout << partition3_dp(A) << '\n';
+	std::cout << partition3_dp_recur(A) << '\n';
 }
