@@ -1,0 +1,6 @@
+﻿D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (LastDigitSumFibNumb.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  LastDigitSumFib.cpp
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\7.  lastdigitsumfib\lastdigitsumfib\lastdigitsumfibnumb\lastdigitsumfib.cpp(30): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\7.  lastdigitsumfib\lastdigitsumfib\lastdigitsumfibnumb\lastdigitsumfib.cpp(50): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\7.  lastdigitsumfib\lastdigitsumfib\lastdigitsumfibnumb\lastdigitsumfib.cpp(25): warning C4715: 'pisano': not all control paths return a value
+  LastDigitSumFibNumb.vcxproj -> C:\Users\dfryz\OneDrive\Courses\Edx Algorithms and Data Structures\repos\7.  LastDigitSumFib\LastDigitSumFib\Debug\LastDigitSumFib.exe

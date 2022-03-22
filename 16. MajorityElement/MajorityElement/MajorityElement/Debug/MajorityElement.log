@@ -1,0 +1,5 @@
+﻿  MajorityElement.cpp
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\16. majorityelement\majorityelement\majorityelement\majorityelement.cpp(9): warning C4305: 'return': truncation from 'int' to 'bool'
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\16. majorityelement\majorityelement\majorityelement\majorityelement.cpp(14): warning C4018: '<=': signed/unsigned mismatch
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\16. majorityelement\majorityelement\majorityelement\majorityelement.cpp(25): warning C4018: '>=': signed/unsigned mismatch
+  MajorityElement.vcxproj -> C:\Users\dfryz\OneDrive\Courses\Edx Algorithms and Data Structures\repos\16. MajorityElement\MajorityElement\Debug\MajorityElement.exe

@@ -1,0 +1,22 @@
+﻿  Lottery.cpp
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(12): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(19): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(20): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(24): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(29): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(34): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(49): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(64): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(67): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(134): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(142): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(151): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(155): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(162): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(173): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(182): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(184): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(186): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(188): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\19. lottery\lottery\lottery\lottery.cpp(194): warning C4244: 'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+  Lottery.vcxproj -> C:\Users\dfryz\OneDrive\Courses\Edx Algorithms and Data Structures\repos\19. Lottery\Lottery\Debug\Lottery.exe

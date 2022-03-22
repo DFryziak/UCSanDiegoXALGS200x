@@ -1,0 +1,4 @@
+﻿  NaivePolMult.cpp
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\naivepolmult\naivepolmult\naivepolmult\naivepolmult.cpp(26): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\naivepolmult\naivepolmult\naivepolmult\naivepolmult.cpp(27): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  NaivePolMult.vcxproj -> C:\Users\dfryz\OneDrive\Courses\Edx Algorithms and Data Structures\repos\NaivePolMult\NaivePolMult\Debug\NaivePolMult.exe

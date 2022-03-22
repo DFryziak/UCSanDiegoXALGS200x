@@ -1,0 +1,4 @@
+﻿  MaximumPairwiseProduct.cpp
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\2. maximumpairwiseproduct\maximumpairwiseproduct\maximumpairwiseproduct.cpp(47): warning C4244: '=': conversion from 'long double' to 'int', possible loss of data
+c:\users\dfryz\onedrive\courses\edx algorithms and data structures\repos\2. maximumpairwiseproduct\maximumpairwiseproduct\maximumpairwiseproduct.cpp(148): warning C4101: 'm': unreferenced local variable
+  MaximumPairwiseProduct.vcxproj -> C:\Users\dfryz\OneDrive\Courses\Edx Algorithms and Data Structures\repos\2. MaximumPairwiseProduct\Debug\MaximumPairwiseProduct.exe
