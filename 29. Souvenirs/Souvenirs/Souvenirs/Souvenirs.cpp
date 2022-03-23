@@ -40,7 +40,7 @@ int subset_sum_recur(vector<int> const &S, int n, int a, int b, int c) {
 	return A || B || C;
 }
 
-// Recursivo.
+// Top-down without memoization.
 int partition3_recur(vector<int> &A) {
 
 	int n = A.size();
@@ -54,7 +54,7 @@ int partition3_recur(vector<int> &A) {
 	return !(sum % 3) && subset_sum_recur(A, n - 1, sum / 3, sum / 3, sum / 3);
 }
 
-// Recursivo pero con "memoization".
+// Top-down with memoization.
 int subset_sum_dp_recur(vector<int> const &S, int n, int a, int b, int c, unordered_map<string, bool> &lookup) {
 	// https://www.techiedelight.com/3-partition-problem/
 
@@ -120,10 +120,76 @@ int partition3_dp_recur(vector<int> &S) {
 	return !(sum % 3) && subset_sum_dp_recur(S, n - 1, sum / 3, sum / 3, sum / 3, lookup);
 }
 
-int partition3_dp_iter() {
-	
-	
-	return 0;
+//// Bottom-up with tabulation.
+//int partition3_dp_iter(vector<int> &S) {
+//	// https://www.geeksforgeeks.org/partition-problem-dp-18/
+//	// https://raymondkevin.top/2020/04/19/algorithmic-toolboxweek-6-dynamic-programming-2/
+//	// Extendemos el caso de 2 particiones a 3.
+//
+//	int n = S.size();
+//
+//	if (n < 3) {
+//		return false;
+//	}
+//
+//	int sum = accumulate(S.begin(), S.end(), 0);
+//	if (sum % 3 != 0) {
+//		return false;
+//	}
+//
+//	int dp[21][601][601];
+//	for (int i = 1; i < n; i++) {
+//		dp[i][0][0] = 1;
+//	}
+//
+//	for (int i = 1; i <= n; i++) {
+//		for (int j = 0; j <= sum / 3; j++) {
+//			for (int k = 0; k <= sum / 3; k++) {
+//				dp[i][j][k] = dp[i - 1][j][k];
+//				if (j >= S[i] && dp[i - 1][j - S[i]][k]) dp[i][j][k] = true;
+//				if (k >= S[i] && dp[i - 1][j][k - S[i]]) dp[i][j][k] = true;
+//			}
+//		}
+//	}
+//
+//	return dp[n][sum / 3][sum / 3];
+//}
+
+// Bottom-up with tabulation.
+int partition3_dp_iter(vector<int> const &S) {
+
+	// https://www.geeksforgeeks.org/partition-problem-dp-18/
+	// https://raymondkevin.top/2020/04/19/algorithmic-toolboxweek-6-dynamic-programming-2/
+	// Extendemos el caso de 2 particiones a 3.
+
+	int n = S.size();
+
+	if (n < 3) {
+		return false;
+	}
+
+	int sum = accumulate(S.begin(), S.end(), 0);
+	if (sum % 3 != 0) {
+		return false;
+	}
+
+	int dp[21][100][100];
+	dp[0][0][0] = 1;
+	for (int i = 1; i <= n; i++) {
+		dp[i][0][0] = 1;
+	}
+
+	for (int i = 1; i <= n; i++) {
+		for (int j = 0; j <= sum; j++) {
+			for (int k = 0; k <= sum; k++) {
+				dp[i][j][k] = dp[i - 1][j][k];
+				if (j >= S[i - 1] && dp[i - 1][j - S[i - 1]][k]) dp[i][j][k] = 1;
+				if (k >= S[i - 1] && dp[i - 1][j][k - S[i - 1]]) dp[i][j][k] = 1;
+			}
+		}
+	}
+
+	return dp[n][sum / 3][sum / 3];
 }
 
 int main() {
@@ -133,6 +199,7 @@ int main() {
 	for (size_t i = 0; i < A.size(); ++i) {
 		std::cin >> A[i];
 	}
-	//std::cout << partition3_recursive(A) << '\n';
-	std::cout << partition3_dp_recur(A) << '\n';
+	// std::cout << partition3_recursive(A) << '\n';
+	// std::cout << partition3_dp_recur(A) << '\n';
+	std::cout << partition3_dp_iter(A) << '\n';
 }
