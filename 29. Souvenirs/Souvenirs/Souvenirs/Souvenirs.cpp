@@ -120,41 +120,6 @@ int partition3_dp_recur(vector<int> &S) {
 	return !(sum % 3) && subset_sum_dp_recur(S, n - 1, sum / 3, sum / 3, sum / 3, lookup);
 }
 
-//// Bottom-up with tabulation.
-//int partition3_dp_iter(vector<int> &S) {
-//	// https://www.geeksforgeeks.org/partition-problem-dp-18/
-//	// https://raymondkevin.top/2020/04/19/algorithmic-toolboxweek-6-dynamic-programming-2/
-//	// Extendemos el caso de 2 particiones a 3.
-//
-//	int n = S.size();
-//
-//	if (n < 3) {
-//		return false;
-//	}
-//
-//	int sum = accumulate(S.begin(), S.end(), 0);
-//	if (sum % 3 != 0) {
-//		return false;
-//	}
-//
-//	int dp[21][601][601];
-//	for (int i = 1; i < n; i++) {
-//		dp[i][0][0] = 1;
-//	}
-//
-//	for (int i = 1; i <= n; i++) {
-//		for (int j = 0; j <= sum / 3; j++) {
-//			for (int k = 0; k <= sum / 3; k++) {
-//				dp[i][j][k] = dp[i - 1][j][k];
-//				if (j >= S[i] && dp[i - 1][j - S[i]][k]) dp[i][j][k] = true;
-//				if (k >= S[i] && dp[i - 1][j][k - S[i]]) dp[i][j][k] = true;
-//			}
-//		}
-//	}
-//
-//	return dp[n][sum / 3][sum / 3];
-//}
-
 // Bottom-up with tabulation.
 int partition3_dp_iter(vector<int> const &S) {
 
@@ -174,14 +139,14 @@ int partition3_dp_iter(vector<int> const &S) {
 	}
 
 	int dp[21][100][100];
-	dp[0][0][0] = 1;
-	for (int i = 1; i <= n; i++) {
-		dp[i][0][0] = 1;
+	for (int i = 0; i <= n; i++) {
+		dp[0][0][0] = 1; // con cualquier conjunto de elementos es posible obtener dos subconjutos que sumen cero.
+										 // Ej. {9,2,4,5} es posible obtener dos conjuntos {}.
 	}
 
 	for (int i = 1; i <= n; i++) {
-		for (int j = 0; j <= sum; j++) {
-			for (int k = 0; k <= sum; k++) {
+		for (int j = 0; j <= sum / 3; j++) {
+			for (int k = 0; k <= sum / 3; k++) {
 				dp[i][j][k] = dp[i - 1][j][k];
 				if (j >= S[i - 1] && dp[i - 1][j - S[i - 1]][k]) dp[i][j][k] = 1;
 				if (k >= S[i - 1] && dp[i - 1][j][k - S[i - 1]]) dp[i][j][k] = 1;
