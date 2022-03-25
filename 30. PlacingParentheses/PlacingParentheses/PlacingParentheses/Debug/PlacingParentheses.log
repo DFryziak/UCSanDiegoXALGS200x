@@ -1,0 +1,4 @@
+﻿  PlacingParentheses.cpp
+c:\users\dfryz\onedrive\courses\edx ucsandiegoxalgs200x\repo\30. placingparentheses\placingparentheses\placingparentheses\placingparentheses.cpp(54): warning C4018: '<': signed/unsigned mismatch
+c:\users\dfryz\onedrive\courses\edx ucsandiegoxalgs200x\repo\30. placingparentheses\placingparentheses\placingparentheses\placingparentheses.cpp(23): warning C4715: 'eval': not all control paths return a value
+  PlacingParentheses.vcxproj -> C:\Users\dfryz\OneDrive\Courses\Edx UCSanDiegoXALGS200x\repo\30. PlacingParentheses\PlacingParentheses\Debug\PlacingParentheses.exe
