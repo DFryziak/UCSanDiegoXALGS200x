@@ -1,2 +1,2 @@
 # repo
- UCSanDiegoX ALGS200x coding challenges
+ UCSanDiegoX ALGS200x programming challenges
